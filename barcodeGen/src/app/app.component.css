@@ -1,0 +1,14 @@
+* {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.box {
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+}
