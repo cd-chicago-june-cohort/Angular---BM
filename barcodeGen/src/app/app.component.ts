@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Retro Barcode Generator 2.0';
   
+  console() {
+    console.log('button pushed');
+  }
+
   colors = [
     "AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray",
     ].sort(() => .5 - Math.random()).slice(0,12);

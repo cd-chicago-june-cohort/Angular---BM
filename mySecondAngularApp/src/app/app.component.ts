@@ -5,8 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'app works!';
-  x: number = 8;
-  myStr: string = "This is a $12,000 App";
+  title = 'Welcome to Funky Town';
+    user = { email:''};
+
+    onsubmit() {
+      console.log("onSubmit");
+    }
+
+
+
 }
