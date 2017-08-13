@@ -1,0 +1,30 @@
+* {
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif; 
+}
+
+h1 {
+    font-size: 30px;
+}
+
+button {
+    background: slategray;
+    font-size: 20px;
+
+}
+
+.timeChoice {
+    background: yellow;
+}
+
+.hide {
+    display: none;
+}
+
+.timeBox {
+    margin-top: 20px;
+    padding: 10px;
+    background: gray;
+    border: 2px solid black;
+    border-radius: 5px;
+}
