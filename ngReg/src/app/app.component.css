@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.inline {
+    margin: 10px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.header {
+    display: inline-block;
+    text-align: left;
+}
+
+.form-group {
+    margin: 10px;
+}
+
+.body {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: darkgray;
+}
+
+#thankYou {
+    border: 2px solid black;
+    background-color: greenyellow;
+    font-family: 'Chewy', cursive;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;    
+}
+
+.lucky {
+    margin-left: 2.5%;
+    width: 95%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.disclaimer {
+    margin-left: 146px;
+    margin-bottom: 20px;
+}
+
+.butt {
+    height: 60px;
+    background-color: gray;
+    color: black;
+    font-size: 2em;
+}
