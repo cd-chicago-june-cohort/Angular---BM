@@ -7,7 +7,7 @@
     </h1>
   </div>
   <div *ngIf = "submit" class="col-lg-10">
-    <h2 id="thankYou">Hello, {{ user.firstName }} {{ user.lastName }} from {{ user.city }} - We thank you for registering with GRC - Global Registration Corporation, Worldwide, LLC, . We'll be watching you!</h2>
+    <h2 id="thankYou">Hello, {{ user.firstName }} {{ user.lastName }} from {{ user.city }} - We thank you for registering with GRC - Global Registration Corporation, Worldwide, LLC.</h2>
   </div>
   <div class="col-lg-10">
       <form class="form-horizontal" #regForm="ngForm" (submit)="onSubmit()">
@@ -25,13 +25,19 @@
               [(ngModel)]="user.firstName"
               #firstName="ngModel"
               class="form-control"
-              placeholder="LaDonTrellone"
-              autofocus>      
+              placeholder="   LaDonTrellone"
+              autofocus>
+              
+                <span *ngIf="firstName.errors.required">Tell us your first name.</span>
+                <p *ngIf="firstName.errors" class="errorMessage">
+                <span *ngIf="firstName.errors.minlength && !firstName.errors.required">First name must be at least 2 letters.</span>
+              </p>
+
             </div>
           </div>
           
           <div class="form-group">
-            <label class="control-label col-sm-2" for="lastName">Last Name: </label>
+            <label class="control-label col-sm-2" for="lastName">Last Name:  </label>
             <div class="col-sm-10">
                 <input 
                 type="text" 
@@ -43,6 +49,12 @@
                 #lastName="ngModel"
                 class="form-control"
                 placeholder="  McGillicuddy">
+
+                <p *ngIf="lastName.errors" class="errorMessage">
+                  <span *ngIf="lastName.errors.required">Tell us your last name.</span>
+                  <span *ngIf="lastName.errors.minlength && !lastName.errors.required">Last name must be at least 2 letters.</span>
+                </p>
+
             </div>
           </div>
 
@@ -57,7 +69,13 @@
                 [(ngModel)]="user.email"
                 #email="ngModel"
                 class="form-control"
-                placeholder=" you123@email.com">
+                placeholder="  you123@email.com">
+
+                <p *ngIf="email.errors" class="errorMessage">
+                  <span *ngIf="email.errors.required">Tell us your email address.</span>
+                  <span *ngIf="email.errors.pattern && !email.errors.required">Email must be valid.  You cannot fool us.</span>
+                </p>
+
             </div>
           </div>
           
@@ -72,7 +90,11 @@
                 [(ngModel)]="user.password"
                 #password="ngModel"
                 class="form-control"
-                placeholder=" you123@email.com">
+                placeholder="  Your dog's name">
+
+                <p *ngIf="passwordConfirmation.errors" class="errorMessage">
+                  <span *ngIf="passwordConfirmation.errors.required">It's your dog's name, we already know.</span>
+                </p>
             </div>
           </div>
         
@@ -88,7 +110,13 @@
                 [(ngModel)]="user.password_confirmation"
                 #passwordConfirmation="ngModel"
                 class="form-control"
-                placeholder=" re-type your dog's name">
+                placeholder="  re-type your dog's name">
+
+                <p *ngIf="passwordConfirmation.errors" class="errorMessage">
+                  <span *ngIf="passwordConfirmation.errors.required">Confirm password</span>
+                  <span *ngIf="user.password_confirmation !== user.password && !passwordConfirmation.errors.required">Passwords must match.  Try again, never give up.</span>
+                </p>
+
             </div>
           </div>
 
@@ -104,7 +132,13 @@
                 [(ngModel)]="user.address"
                 #address="ngModel"
                 class="form-control"
-                placeholder=" 1234 Sesame Street">
+                placeholder="  1234 Sesame Street">
+
+                <p *ngIf="address.errors" class="errorMessage">
+                  <span *ngIf="address.errors.required">Tell us where you live.</span>
+                  <span *ngIf="address.errors.minlength && !address.errors.required">Address must be real.</span>
+                </p>
+
             </div>
           </div>
 
@@ -119,6 +153,8 @@
                 class="form-control" 
                 id="unit" 
                 placeholder=" 2B">
+
+                <p>Leave blank if you're rich.</p>
             </div>
           </div>
 
@@ -133,6 +169,12 @@
                 maxlength="24"
                 [(ngModel)]="user.city"
                 #city="ngModel" class="form-control" id="city" placeholder=" Chicago">
+
+                <p *ngIf="city.errors" class="errorMessage">
+                  <span *ngIf="city.errors.required">City is required</span>
+                  <span *ngIf="city.errors.minlength && !city.errors.required">{{user.city}} is not a real city.</span>
+                </p>
+
             </div>
           </div>
 
@@ -192,6 +234,8 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                   </select>
+
+                  <p>Sorry if you live in Alabama.</p>
             </div>
           </div>
 
@@ -210,6 +254,11 @@
               <input type="submit" [disabled]="!regForm.valid" class="col-lg-12 btn btn-alert butt" value="Register NOW.">
             </div>
           </div>
+
+          <div *ngIf = "submit" class="col-lg-12">
+            <h3 id="thankYou">We've noticed you live at {{user.address}} in {{user.city}}.  We'll be watching you.</h3>
+          </div>
+
         </div>
       </form>
   </div>
