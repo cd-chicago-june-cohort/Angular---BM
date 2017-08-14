@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>
+    <form>
+      Initial Power Level: 
+      <input type="number" name="power" min="1" max="100" [(ngModel)] = "power">
+      <input type="submit" value = "Calculate Powers">
+    </form>
+  </h1>
+  </div>
+</div>
+
+<div class="row">
+  
+    <app-power-level *ngFor="let type of types" [info]="type" [power]="power * type.power"></app-power-level>
+  
+</div>
