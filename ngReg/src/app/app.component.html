@@ -20,18 +20,18 @@
               type="text" 
               name="firstName" 
               required 
-              minlength="2" 
-              maxlength="24"
+              minlength="4" 
+              maxlength="20"
               [(ngModel)]="user.firstName"
               #firstName="ngModel"
               class="form-control"
               placeholder="   LaDonTrellone"
               autofocus>
               
-                <span *ngIf="firstName.errors.required">Tell us your first name.</span>
+                <span *ngIf="firstName.errors">Tell us your first name.</span>
                 <p *ngIf="firstName.errors" class="errorMessage">
-                <span *ngIf="firstName.errors.minlength && !firstName.errors.required">First name must be at least 2 letters.</span>
-              </p>
+                <span *ngIf="firstName.errors.minlength && !firstName.errors.required">You must have a first name?</span>
+                </p>
 
             </div>
           </div>
