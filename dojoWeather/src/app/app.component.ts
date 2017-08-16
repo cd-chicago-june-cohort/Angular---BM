@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   cities = [
-    "Chicago", "Seattle", "SanJose", "Burbank", "Dallas", "DC" 
+    "Chicago", "Seattle", "SanJose", "Burbank", "Dallas", "Washington, DC" 
   ]
   
   cityRoutes = [

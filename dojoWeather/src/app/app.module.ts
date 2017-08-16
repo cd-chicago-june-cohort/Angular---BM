@@ -14,7 +14,7 @@ import { SanjoseComponent } from './sanjose/sanjose.component';
 import { SeattleComponent } from './seattle/seattle.component';
 import { DcComponent } from './dc/dc.component';
 
-import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { HomeComponent } from './home/home.component';
     SanjoseComponent,
     SeattleComponent,
     DcComponent,
-    HomeComponent
+    
   ],
   imports: [
     BrowserModule,

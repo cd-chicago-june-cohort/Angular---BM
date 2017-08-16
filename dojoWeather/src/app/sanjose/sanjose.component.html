@@ -1,3 +1,19 @@
-<p>
-  sanjose works!
-</p>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-12 main">
+        <h1 class="currentCity">San Jose, CA</h1>
+    </div> 
+
+    <div class="col-md-6">
+      <h2 style="color: red">Forecast: {{sanjose.weather[0].description}}</h2>
+      <h3>Temperature (High): {{sanjose.main.temp_max}}</h3>
+      <h3>Temperature (Low): {{sanjose.main.temp_min}}</h3>
+      <h3>Humidity (Average): {{sanjose.main.humidity}}</h3>
+    </div>
+
+    <div class="col-md-6 cityPic">  
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/SanJoseCirclePalms.jpg" class="img-thumbnail img-responsive" alt="San Jose" width="320" height="280">
+    </div>
+  </div>
+</div>

@@ -6,11 +6,11 @@ import { DallasComponent } from './dallas/dallas.component';
 import { SanjoseComponent } from './sanjose/sanjose.component';
 import { SeattleComponent } from './seattle/seattle.component';
 import { DcComponent } from './dc/dc.component';
-import { HomeComponent } from './home/home.component';
+
 
 const routes: Routes = [
 
-    { path: '', pathMatch: 'full', component: HomeComponent },
+    { path: '', pathMatch: 'full', component: ChicagoComponent },
     { path: 'Chicago', component: ChicagoComponent },
     { path: 'Burbank', component: BurbankComponent },    
     { path: 'Seattle', component: SeattleComponent },
