@@ -1,0 +1,8 @@
+.currentCity {
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+.cityPic {
+    padding-top: 10px;
+}
